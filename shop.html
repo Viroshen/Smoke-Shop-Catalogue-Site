@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke Shop</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/e88f34759b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <input title="menu" type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Smoke Shop
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+        </div>
+    </div>
+
+    <div class="shop-background"></div>
+    <div class="overlay"></div>
+    <div class="shop-header">
+        <input type="text" name="search" id="searchbar" placeholder="Search Products.." onkeyup="search_products()">
+    
+        <h3 class="gallery-header">
+            <span class="animate glow delay-1">What</span>
+            <span class="animate glow delay-2">are</span>
+            <span class="animate glow delay-3">you</span>
+            <span class="animate glow delay-4">looking</span>
+            <span class="animate glow delay-5">for?</span>
+        </h3>
+    </div>
+    
+    <div class="gallery">
+        <div class="category-selectors">
+            <div class="category-btn">
+                <span class="category-title" category="highlights" sub="Highlights" onclick="showCategory(this)">Highlights</span>
+            </div>
+            <a class="category-btn">
+                <span class="category-title">Lighters</span>
+                <ul class="sub-category-container">
+                    <li class="sub-category" category="lighters" sub="Zippo" onclick="showCategory(this)">Zippo</li>
+                    <li class="sub-category" category="lighters" sub="Colibri" onclick="showCategory(this)">Colibri</li>
+                    <li class="sub-category" category="lighters" sub="Clipper" onclick="showCategory(this)">Clipper</li>
+                    <li class="sub-category" category="lighters" sub="Ronson" onclick="showCategory(this)">Ronson</li>
+                    <li class="sub-category" category="lighters" sub="Bic" onclick="showCategory(this)">Bic</li>
+                    <li class="sub-category" category="lighters" sub="Alfred-Dunhill" onclick="showCategory(this)">Alfred Dunhill</li>
+                </ul>
+            </a>
+            <a class="category-btn">
+                <span class="category-title">Cigars</span>
+                <ul class="sub-category-container">
+                    <li class="sub-category" category="cigars" sub="Brand 1" onclick="showCategory(this)">Brand 1</li>
+                    <li class="sub-category" category="cigars" sub="Brand 2" onclick="showCategory(this)">Brand 2</li>
+                    <li class="sub-category" category="cigars" sub="Brand 3" onclick="showCategory(this)">Brand 3</li>
+                </ul>
+            </a>
+        </div>
+
+        <!-- category div contains all products under a category, the 'sub' attribute specifies the sub-category. -->
+        <div class="category highlights active-category" sub="Highlights">
+            <div id="Jk403" description="Zippo - lighter(gold)" category="lighters" price="280.00" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product2.jpg" alt="">
+                <div class="product-title">
+                    <h3>Zippo - lighter(gold)</h3>
+                    <p class="product-description">
+                        1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro architecto quos, corporis vitae numquam ducimus quisquam! Magnam sed rem provident accusamus maiores sapiente, voluptatem esse reprehenderit eius, illum sint eos.
+                    </p>
+                    <p>R280.00</p>
+                </div>
+            </div>
+            <div id="Jk402" description="Zippo - lighter(gold)" category="lighters" price="280.00" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product2.jpg" alt="">
+                <div class="product-title">
+                    <h3>Zippo - lighter(gold)</h3>
+                    <p class="product-description">
+                        2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro architecto quos, corporis vitae numquam ducimus quisquam! Magnam sed rem provident accusamus maiores sapiente, voluptatem esse reprehenderit eius, illum sint eos.
+                    </p>
+                    <p>R280.00</p>
+                </div>
+            </div>
+            <div id="Jk401" description="Zippo - lighter(gold)" category="lighters" price="280.00" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product2.jpg" alt="">
+                <div class="product-title">
+                    <h3>Zippo - lighter(gold)</h3>
+                    <p class="product-description">
+                        3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro architecto quos, corporis vitae numquam ducimus quisquam! Magnam sed rem provident accusamus maiores sapiente, voluptatem esse reprehenderit eius, illum sint eos.
+                    </p>
+                    <p>R280.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category lighters" sub="Zippo">
+            <div id="Jk405" description="Zippo - lighter(gold)" category="lighters" price="280.00" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product2.jpg" alt="">
+                <div class="product-title">
+                    <h3>Zippo - lighter(gold)</h3>
+                    <p class="product-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim neque ducimus ullam velit debitis unde illo animi fugiat numquam sunt.
+                    </p>
+                    <p>R280.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category lighters" sub="Colibri">
+            <!-- add product cards -->
+            <div id="LP385" description="Colibri - lighter" category="lighters" price="100.00" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product2.jpg" alt="">
+                <div class="product-title">
+                    <h3>Colibri - lighter</h3>
+                    <p class="product-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta officiis saepe quod tempora ad labore.
+                    </p>
+                    <p>R100.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category lighters" sub="Clipper">
+            <!-- add product cards -->
+            <div id="Ab123" description="Clipper - lighter" category="lighters" price="49.99" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product1.jpg" alt="">
+                <div class="product-title">
+                    <h3>Clipper - Lighter</h3>
+                    <p class="product-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem esse, sint distinctio harum magnam quae necessitatibus enim perferendis earum labore, eius aliquam corrupti, obcaecati aut vel quod molestias in expedita dolorem? Optio dolorum rerum quisquam!
+                    </p>
+                    <p>R49.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category lighters" sub="Ronson">
+            <div id="Hg894" description="Ronson - lighter" category="lighters" price="129.50" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product2.jpg" alt="">
+                <div class="product-title">
+                    <h3>Ronson - lighter</h3>
+                    <p class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est possimus magnam illo nulla eos. Nostrum omnis dolorum dolores cumque magni.
+                    </p>
+                    <p>R129.50</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category lighters" sub="Bic">
+            <div id="Ab342" description="Bic - lighter" category="lighters" price="29.90" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product2.jpg" alt="">
+                <div class="product-title">
+                    <h3>Bic - lighter</h3>
+                    <p class="product-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nisi doloremque culpa atque accusamus! Voluptatum ratione, laboriosam ex natus necessitatibus harum vero saepe est libero aliquam totam.
+                    </p>
+                    <p>R29.90</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category lighters" sub="Alfred-Dunhill">
+            <div id="cH342" description="Alfred Dunhill - lighter" category="lighters" price="349.99" class="product-card" onclick="showProductDetail(this.id)">
+                <img src="images/product2.jpg" alt="">
+                <div class="product-title">
+                    <h3>Alfred Dunhill - lighter</h3>
+                    <p class="product-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quibusdam ipsum maxime sed pariatur iusto blanditiis sapiente atque debitis iste fugiat ex et, similique quisquam voluptatibus tempora eos?
+                    </p>
+                    <p>R349.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category lighters" sub="Do-not-remove"></div>
+    </div>
+</body>
+</html>
